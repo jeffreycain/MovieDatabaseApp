@@ -59,14 +59,14 @@
             // tableBox
             // 
             this.tableBox.FormattingEnabled = true;
-            this.tableBox.Location = new System.Drawing.Point(175, 10);
+            this.tableBox.Location = new System.Drawing.Point(151, 10);
             this.tableBox.Name = "tableBox";
-            this.tableBox.Size = new System.Drawing.Size(335, 420);
+            this.tableBox.Size = new System.Drawing.Size(953, 420);
             this.tableBox.TabIndex = 2;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(569, 19);
+            this.button3.Location = new System.Drawing.Point(1110, 6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(216, 76);
             this.button3.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1338, 450);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.tableBox);
             this.Controls.Add(this.button2);

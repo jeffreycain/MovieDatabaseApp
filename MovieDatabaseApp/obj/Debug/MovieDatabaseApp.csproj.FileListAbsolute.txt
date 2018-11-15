@@ -9,3 +9,14 @@ U:\Database\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.csproj.
 U:\Database\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.exe
 U:\Database\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.pdb
 U:\Database\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.YourQuery.resources
+U:\Database\MovieDBAppGit\MovieDatabaseApp\bin\Debug\MovieDatabaseApp.exe.config
+U:\Database\MovieDBAppGit\MovieDatabaseApp\bin\Debug\MovieDatabaseApp.exe
+U:\Database\MovieDBAppGit\MovieDatabaseApp\bin\Debug\MovieDatabaseApp.pdb
+U:\Database\MovieDBAppGit\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.csprojAssemblyReference.cache
+U:\Database\MovieDBAppGit\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.Form1.resources
+U:\Database\MovieDBAppGit\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.Properties.Resources.resources
+U:\Database\MovieDBAppGit\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.YourQuery.resources
+U:\Database\MovieDBAppGit\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.csproj.GenerateResource.cache
+U:\Database\MovieDBAppGit\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.csproj.CoreCompileInputs.cache
+U:\Database\MovieDBAppGit\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.exe
+U:\Database\MovieDBAppGit\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.pdb

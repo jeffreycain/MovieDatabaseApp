@@ -75,11 +75,30 @@ namespace MovieDatabaseApp
             string runTimeMin = RunTimeMin.Value.ToString();
             string runTimeMax = RunTimeMax.Value.ToString();
 
-            string query = "SELECT ";
+            string query = "SELECT * ";
             if (MT)
-                query += "XX.Title, ";
+                query += "M.Title, ";
+            if (FN)
+                query += "P.FirstName, ";
+            if (LN)
+                query += "P.LastName, ";
+            if (CN)
+                query += "MP.CharacterName, ";
+            if (G)
+                query += "G.Name, ";
+            if (R)
+                query += "R.Name, ";
 
-            _f1.SQLQueryConnection("SELECT * FROM MovieDB.Role");
+            query += "FROM MovieDB.MoviePerson MP";
+            query += " INNER JOIN MovieDB.Person P ON P.PersonID = MP.PersonID";
+            query += " INNER JOIN MovieDB.Role R ON R.RoleID = MP.RoleID";
+            query += " INNER JOIN MovieDB.Movie M ON M.MovieID = MP.MovieID";
+            query += " INNER JOIN MovieDB.MovieGenre MG ON MG.MovieID = M.MovieID";
+            query += " INNER JOIN MovieDB.Genre G ON MG.GenreID = G.GenreID";
+            query += " WHERE M.RunTime >= " + runTimeMin; //+ " & M.RunTime <= " + runTimeMax;
+
+
+            _f1.SQLQueryConnection(query);
             this.Close();
         }
     }
