@@ -20,3 +20,4 @@ U:\Database\MovieDBAppGit\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.csproj.Gen
 U:\Database\MovieDBAppGit\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.csproj.CoreCompileInputs.cache
 U:\Database\MovieDBAppGit\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.exe
 U:\Database\MovieDBAppGit\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.pdb
+U:\Database\MovieDBAppGit\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.Procedure.resources
