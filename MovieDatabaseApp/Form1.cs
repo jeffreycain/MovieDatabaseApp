@@ -76,5 +76,11 @@ namespace MovieDatabaseApp
             YourQuery YQ = new YourQuery(this);
             YQ.Show();
         }
+
+        private void Pform_Click(object sender, EventArgs e)
+        {
+            Procedure p = new Procedure(this);
+            p.Show();
+        }
     }
 }
