@@ -98,7 +98,7 @@ namespace MovieDatabaseApp
             query += " WHERE M.RunTime >= " + runTimeMin; //+ " & M.RunTime <= " + runTimeMax;
 
 
-            _f1.SQLQueryConnection(query);
+            //_f1.SQLQueryConnection(query);
             this.Close();
         }
     }

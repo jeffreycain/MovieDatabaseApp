@@ -19,33 +19,18 @@ namespace MovieDatabaseApp
             InitializeComponent();
             _f1 = f1;
             updateGenreListBox();
-
-
+            updateRoleListBox();
         }
 
         public void updateGenreListBox()
         {
-            string connectionString = null;
-            SqlConnection cnn;
-            SqlCommand command;
-            SqlDataReader dataReader;
-            connectionString = "Data Source = mssql.cs.ksu.edu;Initial Catalog = CIS560_team10; Integrated Security = True";
-            cnn = new SqlConnection(connectionString);
-            cnn.Open();
-            string query = "Select MovieDB.Genre.Name From MovieDB.Genre";
-            command = new SqlCommand(query, cnn);
-            dataReader = command.ExecuteReader();
+            _f1.SQLQueryConnection(GenreBox,"Select MovieDB.Genre.Name From MovieDB.Genre");
+            _f1.SQLQueryConnection(NewGenreBox, "Select MovieDB.Genre.Name From MovieDB.Genre");
 
-            while (dataReader.Read())
-            {
-                
-             GenreBox.Items.Add(dataReader.GetValue(0));
-             NewGenreBox.Items.Add(dataReader.GetValue(0));
-
-            }
-            dataReader.Close();
-            command.Dispose();
-            cnn.Close();
+        }
+        public void updateRoleListBox()
+        {
+            _f1.SQLQueryConnection(RoleBox, "Select MovieDB.Role.Name From MovieDB.Role");
         }
     }
 
