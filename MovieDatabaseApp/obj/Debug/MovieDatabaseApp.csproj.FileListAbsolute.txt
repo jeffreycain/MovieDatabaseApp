@@ -9,3 +9,15 @@ U:\Database\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.csproj.
 U:\Database\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.exe
 U:\Database\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.pdb
 U:\Database\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.YourQuery.resources
+C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.csprojAssemblyReference.cache
+C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.Form1.resources
+C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.Procedure.resources
+C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.Properties.Resources.resources
+C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.YourQuery.resources
+C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.csproj.GenerateResource.cache
+C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.csproj.CoreCompileInputs.cache
+C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.exe
+C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.pdb
+C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\bin\Debug\MovieDatabaseApp.exe.config
+C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\bin\Debug\MovieDatabaseApp.exe
+C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\bin\Debug\MovieDatabaseApp.pdb
