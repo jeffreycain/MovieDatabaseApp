@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.addPerson = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.firstName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.movie = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lastName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.runTime = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.year = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.GenreBox = new System.Windows.Forms.ListBox();
             this.Genre = new System.Windows.Forms.Label();
             this.RoleBox = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.movieTitle = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,16 +55,12 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.roleName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.NewGenreBox = new System.Windows.Forms.ListBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.label14 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.results = new System.Windows.Forms.ListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.runTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.year)).BeginInit();
             this.SuspendLayout();
             // 
             // addPerson
@@ -75,13 +71,14 @@
             this.addPerson.TabIndex = 0;
             this.addPerson.Text = "Add Person";
             this.addPerson.UseVisualStyleBackColor = true;
+            this.addPerson.Click += new System.EventHandler(this.addPerson_Click);
             // 
-            // textBox1
+            // firstName
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(86, 20);
-            this.textBox1.TabIndex = 1;
+            this.firstName.Location = new System.Drawing.Point(12, 12);
+            this.firstName.Name = "firstName";
+            this.firstName.Size = new System.Drawing.Size(86, 20);
+            this.firstName.TabIndex = 1;
             // 
             // label1
             // 
@@ -92,12 +89,12 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "First Name";
             // 
-            // textBox2
+            // movie
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(86, 20);
-            this.textBox2.TabIndex = 3;
+            this.movie.Location = new System.Drawing.Point(12, 38);
+            this.movie.Name = "movie";
+            this.movie.Size = new System.Drawing.Size(86, 20);
+            this.movie.TabIndex = 3;
             // 
             // label2
             // 
@@ -108,12 +105,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Last Name";
             // 
-            // textBox3
+            // lastName
             // 
-            this.textBox3.Location = new System.Drawing.Point(167, 12);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(86, 20);
-            this.textBox3.TabIndex = 5;
+            this.lastName.Location = new System.Drawing.Point(167, 12);
+            this.lastName.Name = "lastName";
+            this.lastName.Size = new System.Drawing.Size(86, 20);
+            this.lastName.TabIndex = 5;
             // 
             // label4
             // 
@@ -124,12 +121,17 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Movie Title";
             // 
-            // numericUpDown1
+            // runTime
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(167, 38);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(86, 20);
-            this.numericUpDown1.TabIndex = 8;
+            this.runTime.Location = new System.Drawing.Point(167, 38);
+            this.runTime.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.runTime.Name = "runTime";
+            this.runTime.Size = new System.Drawing.Size(86, 20);
+            this.runTime.TabIndex = 8;
             // 
             // label5
             // 
@@ -149,12 +151,27 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Year Released";
             // 
-            // numericUpDown2
+            // year
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(323, 39);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(86, 20);
-            this.numericUpDown2.TabIndex = 11;
+            this.year.Location = new System.Drawing.Point(323, 39);
+            this.year.Maximum = new decimal(new int[] {
+            2022,
+            0,
+            0,
+            0});
+            this.year.Minimum = new decimal(new int[] {
+            1870,
+            0,
+            0,
+            0});
+            this.year.Name = "year";
+            this.year.Size = new System.Drawing.Size(86, 20);
+            this.year.TabIndex = 11;
+            this.year.Value = new decimal(new int[] {
+            1870,
+            0,
+            0,
+            0});
             // 
             // button1
             // 
@@ -164,6 +181,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Add Movie";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // GenreBox
             // 
@@ -199,12 +217,12 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Role";
             // 
-            // textBox4
+            // movieTitle
             // 
-            this.textBox4.Location = new System.Drawing.Point(323, 11);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(86, 20);
-            this.textBox4.TabIndex = 17;
+            this.movieTitle.Location = new System.Drawing.Point(323, 11);
+            this.movieTitle.Name = "movieTitle";
+            this.movieTitle.Size = new System.Drawing.Size(86, 20);
+            this.movieTitle.TabIndex = 17;
             // 
             // label7
             // 
@@ -288,76 +306,49 @@
             this.button2.Text = "Update Person";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox9
+            // roleName
             // 
-            this.textBox9.Location = new System.Drawing.Point(12, 90);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(86, 20);
-            this.textBox9.TabIndex = 28;
+            this.roleName.Location = new System.Drawing.Point(12, 93);
+            this.roleName.Name = "roleName";
+            this.roleName.Size = new System.Drawing.Size(86, 20);
+            this.roleName.TabIndex = 28;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(104, 97);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 13);
+            this.label10.Size = new System.Drawing.Size(54, 13);
             this.label10.TabIndex = 29;
-            this.label10.Text = "Movie Title";
-            // 
-            // NewGenreBox
-            // 
-            this.NewGenreBox.FormattingEnabled = true;
-            this.NewGenreBox.Location = new System.Drawing.Point(342, 93);
-            this.NewGenreBox.Name = "NewGenreBox";
-            this.NewGenreBox.Size = new System.Drawing.Size(86, 17);
-            this.NewGenreBox.TabIndex = 30;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(434, 97);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 13);
-            this.label13.TabIndex = 31;
-            this.label13.Text = "New Genre";
+            this.label10.Text = "New Role";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(498, 90);
+            this.button3.Location = new System.Drawing.Point(167, 90);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(86, 25);
             this.button3.TabIndex = 32;
-            this.button3.Text = "Update Genre";
+            this.button3.Text = "Add Role";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // numericUpDown3
+            // results
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(167, 90);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(86, 20);
-            this.numericUpDown3.TabIndex = 33;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(259, 97);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(77, 13);
-            this.label14.TabIndex = 34;
-            this.label14.Text = "Year Released";
+            this.results.FormattingEnabled = true;
+            this.results.Location = new System.Drawing.Point(22, 268);
+            this.results.Name = "results";
+            this.results.Size = new System.Drawing.Size(275, 108);
+            this.results.TabIndex = 33;
             // 
             // Procedure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.numericUpDown3);
+            this.Controls.Add(this.results);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.NewGenreBox);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.roleName);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox8);
@@ -368,28 +359,27 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.movieTitle);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.RoleBox);
             this.Controls.Add(this.Genre);
             this.Controls.Add(this.GenreBox);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.year);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.runTime);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.lastName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.movie);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.firstName);
             this.Controls.Add(this.addPerson);
             this.Name = "Procedure";
             this.Text = "Procedure";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.runTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.year)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,22 +388,22 @@
         #endregion
 
         private System.Windows.Forms.Button addPerson;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox firstName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox movie;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox lastName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown runTime;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown year;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox GenreBox;
         private System.Windows.Forms.Label Genre;
         private System.Windows.Forms.ListBox RoleBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox movieTitle;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label8;
@@ -424,12 +414,9 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox roleName;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ListBox NewGenreBox;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ListBox results;
     }
 }
