@@ -75,13 +75,9 @@ namespace MovieDatabaseApp
             string runTimeMin = RunTimeMin.Value.ToString();
             string runTimeMax = RunTimeMax.Value.ToString();
 
-            string query = "SELECT ";
+            string query = "SELECT * ";
             if (MT)
-            {
                 query += "M.Title, ";
-                query += "M.YearReleased, ";
-                query += "M.RunTime ";
-            }
             if (FN)
                 query += "P.FirstName, ";
             if (LN)
@@ -92,7 +88,6 @@ namespace MovieDatabaseApp
                 query += "G.Name, ";
             if (R)
                 query += "R.Name, ";
-            
 
             query += "FROM MovieDB.MoviePerson MP";
             query += " INNER JOIN MovieDB.Person P ON P.PersonID = MP.PersonID";
@@ -100,10 +95,10 @@ namespace MovieDatabaseApp
             query += " INNER JOIN MovieDB.Movie M ON M.MovieID = MP.MovieID";
             query += " INNER JOIN MovieDB.MovieGenre MG ON MG.MovieID = M.MovieID";
             query += " INNER JOIN MovieDB.Genre G ON MG.GenreID = G.GenreID";
-            query += " WHERE M.RunTime >= " + runTimeMin + " AND M.RunTime < " + runTimeMax;
+            query += " WHERE M.RunTime >= " + runTimeMin; //+ " & M.RunTime <= " + runTimeMax;
 
 
-            _f1.SQLQueryConnection("EXEC MovieDB.FetchMoviesWithRunTime 61, 62");
+            //_f1.SQLQueryConnection(query);
             this.Close();
         }
     }

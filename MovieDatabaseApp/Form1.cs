@@ -20,10 +20,10 @@ namespace MovieDatabaseApp
         }
 
 
-        public void SQLQueryConnection(string query)
+        public void SQLQueryConnection(ListBox b, string query)
         {
 
-            tableBox.Items.Clear();
+            b.Items.Clear();
 
             string connectionString = null;
             SqlConnection cnn;
@@ -50,7 +50,7 @@ namespace MovieDatabaseApp
                     if (x < columns - 1)
                         inserts += " - ";
                 }
-                tableBox.Items.Add(inserts);
+                b.Items.Add(inserts);
 
             }
                 dataReader.Close();
@@ -63,7 +63,7 @@ namespace MovieDatabaseApp
             Button b = sender as Button;
             try
             {
-                SQLQueryConnection(b.Text);
+                SQLQueryConnection(tableBox, b.Text);
             }
             catch (Exception ex)
             {
@@ -75,6 +75,12 @@ namespace MovieDatabaseApp
         {
             YourQuery YQ = new YourQuery(this);
             YQ.Show();
+        }
+
+        private void Pform_Click(object sender, EventArgs e)
+        {
+            Procedure p = new Procedure(this);
+            p.Show();
         }
     }
 }

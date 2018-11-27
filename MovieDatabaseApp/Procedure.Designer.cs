@@ -40,9 +40,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.GenreBox = new System.Windows.Forms.ListBox();
             this.Genre = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.RoleBox = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.NewGenreBox = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
@@ -165,13 +165,13 @@
             this.button1.Text = "Add Movie";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // GenreBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(498, 41);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(86, 17);
-            this.listBox1.TabIndex = 13;
+            this.GenreBox.FormattingEnabled = true;
+            this.GenreBox.Location = new System.Drawing.Point(498, 41);
+            this.GenreBox.Name = "GenreBox";
+            this.GenreBox.Size = new System.Drawing.Size(86, 17);
+            this.GenreBox.TabIndex = 13;
             // 
             // Genre
             // 
@@ -182,13 +182,13 @@
             this.Genre.TabIndex = 14;
             this.Genre.Text = "Genre";
             // 
-            // listBox2
+            // RoleBox
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(498, 15);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(86, 17);
-            this.listBox2.TabIndex = 15;
+            this.RoleBox.FormattingEnabled = true;
+            this.RoleBox.Location = new System.Drawing.Point(498, 15);
+            this.RoleBox.Name = "RoleBox";
+            this.RoleBox.Size = new System.Drawing.Size(86, 17);
+            this.RoleBox.TabIndex = 15;
             // 
             // label3
             // 
@@ -304,13 +304,13 @@
             this.label10.TabIndex = 29;
             this.label10.Text = "Movie Title";
             // 
-            // listBox3
+            // NewGenreBox
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(342, 93);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(86, 17);
-            this.listBox3.TabIndex = 30;
+            this.NewGenreBox.FormattingEnabled = true;
+            this.NewGenreBox.Location = new System.Drawing.Point(342, 93);
+            this.NewGenreBox.Name = "NewGenreBox";
+            this.NewGenreBox.Size = new System.Drawing.Size(86, 17);
+            this.NewGenreBox.TabIndex = 30;
             // 
             // label13
             // 
@@ -355,7 +355,7 @@
             this.Controls.Add(this.numericUpDown3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.NewGenreBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.button2);
@@ -370,9 +370,9 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.RoleBox);
             this.Controls.Add(this.Genre);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.GenreBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.label6);
@@ -409,9 +409,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox GenreBox;
         private System.Windows.Forms.Label Genre;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox RoleBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
@@ -426,7 +426,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox NewGenreBox;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
