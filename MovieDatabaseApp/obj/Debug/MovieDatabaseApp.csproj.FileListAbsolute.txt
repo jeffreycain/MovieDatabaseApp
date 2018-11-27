@@ -32,3 +32,4 @@ C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieD
 C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\bin\Debug\MovieDatabaseApp.exe.config
 C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\bin\Debug\MovieDatabaseApp.exe
 C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\bin\Debug\MovieDatabaseApp.pdb
+U:\Database\MovieDBAppGit\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.Procedure.resources
