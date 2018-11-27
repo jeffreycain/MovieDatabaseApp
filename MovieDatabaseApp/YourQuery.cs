@@ -21,85 +21,180 @@ namespace MovieDatabaseApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string movieTitle = "";
-            bool MT = false;
-            if(MovieTitleTB.Text != string.Empty)
-            {
-                movieTitle = MovieTitleTB.Text;
-                MT = true;
-            }
+            //string movieTitle = "";
+            //bool MT = false;
+            //if(MovieTitleTB.Text != string.Empty)
+            //{
+            //    movieTitle = MovieTitleTB.Text;
+            //    MT = true;
+            //}
 
-            string firstName = "";
-            bool FN = false;
-            if (FirstNameTB.Text != string.Empty)
-            {
-                firstName = FirstNameTB.Text;
-                FN = true;
-            }
+            //string firstName = "";
+            //bool FN = false;
+            //if (FirstNameTB.Text != string.Empty)
+            //{
+            //    firstName = FirstNameTB.Text;
+            //    FN = true;
+            //}
 
-            string lastName = "";
-            bool LN = false;
-            if (LastNameTB.Text != string.Empty)
-            {
-                lastName = LastNameTB.Text;
-                LN = true;
-            }
+            //string lastName = "";
+            //bool LN = false;
+            //if (LastNameTB.Text != string.Empty)
+            //{
+            //    lastName = LastNameTB.Text;
+            //    LN = true;
+            //}
 
-            string characterName = "";
-            bool CN = false;
-            if (CharacterNameTB.Text != string.Empty)
-            {
-                characterName = CharacterNameTB.Text;
-                CN = true;
-            }
+            //string characterName = "";
+            //bool CN = false;
+            //if (CharacterNameTB.Text != string.Empty)
+            //{
+            //    characterName = CharacterNameTB.Text;
+            //    CN = true;
+            //}
+            
 
-            string genre = "";
-            bool G = false;
-            if (GenreTB.Text != string.Empty)
-            {
-                genre = GenreTB.Text;
-                G = true;
-            }
-
-            string role = "";
-            bool R = false;
-            if (RoleTB.Text != string.Empty)
-            {
-                role = RoleTB.Text;
-                R = true;
-            }
-
-            string yearMin = YearMin.Value.ToString();
-            string yearMax = YearMax.Value.ToString();
-
-            string runTimeMin = RunTimeMin.Value.ToString();
-            string runTimeMax = RunTimeMax.Value.ToString();
-
-            string query = "SELECT * ";
-            if (MT)
-                query += "M.Title, ";
-            if (FN)
-                query += "P.FirstName, ";
-            if (LN)
-                query += "P.LastName, ";
-            if (CN)
-                query += "MP.CharacterName, ";
-            if (G)
-                query += "G.Name, ";
-            if (R)
-                query += "R.Name, ";
-
-            query += "FROM MovieDB.MoviePerson MP";
-            query += " INNER JOIN MovieDB.Person P ON P.PersonID = MP.PersonID";
-            query += " INNER JOIN MovieDB.Role R ON R.RoleID = MP.RoleID";
-            query += " INNER JOIN MovieDB.Movie M ON M.MovieID = MP.MovieID";
-            query += " INNER JOIN MovieDB.MovieGenre MG ON MG.MovieID = M.MovieID";
-            query += " INNER JOIN MovieDB.Genre G ON MG.GenreID = G.GenreID";
-            query += " WHERE M.RunTime >= " + runTimeMin; //+ " & M.RunTime <= " + runTimeMax;
+            //string role = "";
+            //bool R = false;
+            //if (RoleTB.Text != string.Empty)
+            //{
+            //    role = RoleTB.Text;
+            //    R = true;
+            //}
 
 
             //_f1.SQLQueryConnection(query);
             this.Close();
+        }
+
+        private void RuntimeButton_Click(object sender, EventArgs e)
+        {
+            string runTimeMin = RunTimeMin.Value.ToString();
+            string runTimeMax = RunTimeMax.Value.ToString();
+            string SQLexec = "EXEC MovieDB.FetchMoviesWithRuntime " + runTimeMin + ", " + runTimeMax + ";";
+            //MessageBox.Show(SQLexec);
+            _f1.SQLQueryConnection(_f1.tableBox,SQLexec);
+            this.Close();
+        }
+
+        private void YearReleasedButton_Click(object sender, EventArgs e)
+        {
+            string yearMin = YearMin.Value.ToString();
+            string yearMax = YearMax.Value.ToString();
+            string SQLexec = "EXEC MovieDB.FetchMoviesWithYears " + yearMin + ", " + yearMax + ";";
+            _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+            this.Close();
+        }
+
+        private void GenreButton_Click(object sender, EventArgs e)
+        {
+            string genre = "";
+            if (GenreTB.Text != string.Empty)
+            {
+                genre = GenreTB.Text;
+                string SQLexec = "EXEC MovieDB.FetchMoviesWithGenre '" + genre + "';";
+                _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+                this.Close();
+            }
+        }
+
+        private void GenresWithMovieButton_Click(object sender, EventArgs e)
+        {
+            string movie = "";
+            if (GenresWithMovieBox.Text != string.Empty)
+            {
+                movie = GenresWithMovieBox.Text;
+                string SQLexec = "EXEC MovieDB.FetchGenresWithMovie '" + movie + "';";
+                _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+                this.Close();
+            }
+        }
+
+        private void DirectorButton_Click(object sender, EventArgs e)
+        {
+            string DirOfMovie = "";
+            if (DirectorTB.Text != string.Empty)
+            {
+                DirOfMovie = DirectorTB.Text;
+                string SQLexec = "EXEC MovieDB.FetchDirectorOfMovie '" + DirOfMovie + "';";
+                _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+                this.Close();
+            }
+        }
+
+        private void MoviePartialButton_Click(object sender, EventArgs e)
+        {
+            string MoviePT = "";
+            if (MoviePartialTB.Text != string.Empty)
+            {
+                MoviePT = MoviePartialTB.Text;
+                string SQLexec = "EXEC MovieDB.FetchFullMovieTitleFromPartialTitle '" + MoviePT + "';";
+                _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+                this.Close();
+            }
+        }
+
+        private void FirstNameMovieButton_Click(object sender, EventArgs e)
+        {
+            if (MovieTB.Text != string.Empty && ActorFNTB.Text != string.Empty)
+            {
+                string movie= MovieTB.Text;
+                string actor = ActorFNTB.Text;
+                string SQLexec = "EXEC MovieDB.FetchActorsNameFromFirstNameAndMovie'" + actor + "', '" + movie + "';";
+                _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+                this.Close();
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (MovieCount.Enabled == true)
+            {
+                MovieCount.Enabled = false;
+                radioButton1.Checked = false;
+            }
+            else
+                MovieCount.Enabled = true;
+        }
+
+        private void RecentMovieByButton_Click(object sender, EventArgs e)
+        {
+            if (RecentMovieDTB.Text != string.Empty)
+            {
+                string director = RecentMovieDTB.Text;
+                string SQLexec = "EXEC MovieDB.FetchMostRecentMovieFromDirector '" + director + "'";
+                if (radioButton1.Checked == true)
+                {
+                    string number = MovieCount.Value.ToString();
+                    SQLexec += ", " + number;
+                }
+                SQLexec += ";";
+                _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+                this.Close();
+            }
+        }
+
+        private void MovieCountButton_Click(object sender, EventArgs e)
+        {
+            if (MovieCountName.Text != string.Empty && MovieCountRole.Text != string.Empty)
+            {
+                string actor = MovieCountName.Text;
+                string role = MovieCountRole.Text;
+                string SQLexec = "EXEC MovieDB.FetchNumberOfMoviesFromNameAndRole '" + actor + "', '" + role + "';";
+                _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+                this.Close();
+            }
+        }
+
+        private void GOfMovieButton_Click(object sender, EventArgs e)
+        {
+            if (GOfMovieTB.Text != string.Empty)
+            {
+                string movie = GOfMovieTB.Text;
+                string SQLexec = "EXEC MovieDB.FetchGenreOfMovie '" + movie + "';";
+                _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+                this.Close();
+            }
         }
     }
 }
