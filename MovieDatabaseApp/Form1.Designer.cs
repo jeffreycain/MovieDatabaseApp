@@ -60,7 +60,7 @@
             this.Pform.Name = "Pform";
             this.Pform.Size = new System.Drawing.Size(216, 95);
             this.Pform.TabIndex = 4;
-            this.Pform.Text = "Procedure Form";
+            this.Pform.Text = "Administrator Form";
             this.Pform.UseVisualStyleBackColor = true;
             this.Pform.Click += new System.EventHandler(this.Pform_Click);
             // 
