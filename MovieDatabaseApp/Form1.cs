@@ -98,5 +98,11 @@ namespace MovieDatabaseApp
             Procedure p = new Procedure(this);
             p.Show();
         }
+
+        private void ReportButton_Click(object sender, EventArgs e)
+        {
+            ReportForm RF = new ReportForm(this);
+            RF.Show();
+        }
     }
 }
