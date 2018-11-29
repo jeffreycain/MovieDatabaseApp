@@ -43,7 +43,7 @@ namespace MovieDatabaseApp
 
                 try
                 {
-                    _f1.SQLQueryConnection(results, "Exec MovieDB.ThrowError");
+                    _f1.SQLQueryConnection(_f1.tableBox, "Exec MovieDB.ThrowError");
                 }
                 catch (Exception ex )
                 {
@@ -59,7 +59,7 @@ namespace MovieDatabaseApp
             else
             {
                 string pass = "EXEC MovieDB.AddRole '" + roleName.Text + "';";
-                _f1.SQLQueryConnection(results, pass);
+                _f1.SQLQueryConnection(_f1.tableBox, pass);
                 updateRoleListBox();
                 MessageBox.Show ("Role Added Successfully");
             }
@@ -73,7 +73,7 @@ namespace MovieDatabaseApp
             {
   
                 string pass = "EXEC MovieDB.AddMovie '" + movie.Text + "', '" + runTime.Value + "', '" + year.Value + "', '" + GenreBox.Text + "';";
-                _f1.SQLQueryConnection(results, pass);
+                _f1.SQLQueryConnection(_f1.tableBox, pass);
                 MessageBox.Show("Movie Added Successfully");
             }
         }

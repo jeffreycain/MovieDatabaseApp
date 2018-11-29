@@ -58,7 +58,6 @@
             this.roleName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.results = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.runTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.year)).BeginInit();
             this.SuspendLayout();
@@ -332,20 +331,11 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // results
-            // 
-            this.results.FormattingEnabled = true;
-            this.results.Location = new System.Drawing.Point(22, 268);
-            this.results.Name = "results";
-            this.results.Size = new System.Drawing.Size(275, 108);
-            this.results.TabIndex = 33;
-            // 
             // Procedure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.results);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.roleName);
@@ -377,7 +367,7 @@
             this.Controls.Add(this.firstName);
             this.Controls.Add(this.addPerson);
             this.Name = "Procedure";
-            this.Text = "Procedure";
+            this.Text = "Administrator";
             ((System.ComponentModel.ISupportInitialize)(this.runTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.year)).EndInit();
             this.ResumeLayout(false);
@@ -417,6 +407,5 @@
         private System.Windows.Forms.TextBox roleName;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ListBox results;
     }
 }
