@@ -46,6 +46,8 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
+            this.TableReader = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.TableReader)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -73,14 +75,14 @@
             // tableBox
             // 
             this.tableBox.FormattingEnabled = true;
-            this.tableBox.Location = new System.Drawing.Point(279, 10);
+            this.tableBox.Location = new System.Drawing.Point(942, 578);
             this.tableBox.Name = "tableBox";
-            this.tableBox.Size = new System.Drawing.Size(825, 420);
+            this.tableBox.Size = new System.Drawing.Size(10, 17);
             this.tableBox.TabIndex = 2;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1110, 6);
+            this.button3.Location = new System.Drawing.Point(891, 10);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(216, 76);
             this.button3.TabIndex = 3;
@@ -90,7 +92,7 @@
             // 
             // Pform
             // 
-            this.Pform.Location = new System.Drawing.Point(1110, 88);
+            this.Pform.Location = new System.Drawing.Point(891, 92);
             this.Pform.Name = "Pform";
             this.Pform.Size = new System.Drawing.Size(216, 95);
             this.Pform.TabIndex = 4;
@@ -237,11 +239,20 @@
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button_Click);
             // 
+            // TableReader
+            // 
+            this.TableReader.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TableReader.Location = new System.Drawing.Point(293, 10);
+            this.TableReader.Name = "TableReader";
+            this.TableReader.Size = new System.Drawing.Size(592, 593);
+            this.TableReader.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1338, 637);
+            this.ClientSize = new System.Drawing.Size(1112, 637);
+            this.Controls.Add(this.TableReader);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
@@ -262,6 +273,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.TableReader)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,6 +299,7 @@
         private System.Windows.Forms.Button button13;
         public System.Windows.Forms.ListBox tableBox;
         private System.Windows.Forms.Button button14;
+        public System.Windows.Forms.DataGridView TableReader;
     }
 }
 

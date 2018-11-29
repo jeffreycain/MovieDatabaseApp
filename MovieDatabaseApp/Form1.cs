@@ -24,39 +24,55 @@ namespace MovieDatabaseApp
         {
 
             b.Items.Clear();
+            for (int x = 0; x < TableReader.ColumnCount; x++)
+                TableReader.Columns.RemoveAt(x);
 
             string connectionString = null;
             SqlConnection cnn;
-            SqlCommand command;
-            SqlDataReader dataReader;
+            //SqlCommand command;
+            //SqlDataReader dataReader;
             connectionString = "Data Source = mssql.cs.ksu.edu;Initial Catalog = CIS560_team10; Integrated Security = True";
             cnn = new SqlConnection(connectionString);
             cnn.Open();
-            command = new SqlCommand(query, cnn);
-            dataReader = command.ExecuteReader();
-            
-                
-                //then loop over the number
+            //command = new SqlCommand(query, cnn);
+            //           dataReader = command.ExecuteReader();
 
-            while (dataReader.Read())
-             {
-                Object[] MyObject = new object[dataReader.FieldCount];
-                int columns = dataReader.GetValues(MyObject);
-                //tableBox.Items.Add(dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3));
-                string inserts = "";
-                for (int x = 0; x < columns; x++)
-                {
-                    inserts += dataReader.GetValue(x);
-                    if (x < columns - 1)
-                        inserts += " - ";
-                }
-                b.Items.Add(inserts);
 
-            }
-                dataReader.Close();
-                command.Dispose();
-                cnn.Close();
-            }
+            //then loop over the number
+
+            //while (dataReader.Read())
+            //{
+            //    Object[] MyObjectX = new object[dataReader.FieldCount];
+            //    int columnsX = dataReader.GetValues(MyObjectX);
+            //    tableBox.Items.Add(dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3));
+            //    string insertsX = "";
+
+
+            //    for (int x = 0; x < columnsX; x++)
+            //    {
+            //        insertsX += dataReader.GetValue(x);
+            //        if (x < columnsX - 1)
+            //            insertsX += " - ";
+            //    }
+            //    b.Items.Add(insertsX);
+
+
+
+            //}
+
+            //dataReader.Close();
+
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter adapt = new SqlDataAdapter(query, cnn);
+            adapt.Fill(dt);
+            TableReader.DataSource = dt;
+
+
+            adapt.Dispose();
+            //command.Dispose();
+            cnn.Close();
+        }
 
         private void button_Click(object sender, EventArgs e)
         {
