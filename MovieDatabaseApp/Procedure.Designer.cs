@@ -176,9 +176,9 @@
             // 
             this.button1.Location = new System.Drawing.Point(632, 39);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 20);
+            this.button1.Size = new System.Drawing.Size(156, 20);
             this.button1.TabIndex = 12;
-            this.button1.Text = "Add Movie";
+            this.button1.Text = "Add Movie/Update Genre";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
