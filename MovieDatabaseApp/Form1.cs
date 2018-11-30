@@ -31,10 +31,10 @@ namespace MovieDatabaseApp
             SQLQueryConnectionListBox(r, "Select MovieDB.Role.Name From MovieDB.Role");
         }
 
-        public void SQLQueryConnection(ListBox b, string query)
+        public void SQLQueryConnection(string query)
         {
 
-            b.Items.Clear();
+           // b.Items.Clear();
             for (int x = 0; x < TableReader.ColumnCount; x++)
                 TableReader.Columns.RemoveAt(x);
 
@@ -135,7 +135,7 @@ namespace MovieDatabaseApp
             Button b = sender as Button;
             try
             {
-                SQLQueryConnection(tableBox, b.Text);
+                SQLQueryConnection(b.Text);
             }
             catch (Exception ex)
             {

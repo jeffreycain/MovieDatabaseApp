@@ -76,7 +76,7 @@ namespace MovieDatabaseApp
             string runTimeMax = RunTimeMax.Value.ToString();
             string SQLexec = "EXEC MovieDB.FetchMoviesWithRuntime " + runTimeMin + ", " + runTimeMax + ";";
             //MessageBox.Show(SQLexec);
-            _f1.SQLQueryConnection(_f1.tableBox,SQLexec);
+            _f1.SQLQueryConnection(SQLexec);
             this.Close();
         }
 
@@ -85,7 +85,7 @@ namespace MovieDatabaseApp
             string yearMin = YearMin.Value.ToString();
             string yearMax = YearMax.Value.ToString();
             string SQLexec = "EXEC MovieDB.FetchMoviesWithYears " + yearMin + ", " + yearMax + ";";
-            _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+            _f1.SQLQueryConnection(SQLexec);
             this.Close();
         }
 
@@ -96,7 +96,7 @@ namespace MovieDatabaseApp
             {
                 genre = GenreTB.Text;
                 string SQLexec = "EXEC MovieDB.FetchMoviesWithGenre '" + genre + "';";
-                _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+                _f1.SQLQueryConnection(SQLexec);
                 this.Close();
             }
         }
@@ -108,7 +108,7 @@ namespace MovieDatabaseApp
             {
                 movie = GenresWithMovieBox.Text;
                 string SQLexec = "EXEC MovieDB.FetchGenresWithMovie '" + movie + "';";
-                _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+                _f1.SQLQueryConnection(SQLexec);
                 this.Close();
             }
         }
@@ -120,7 +120,7 @@ namespace MovieDatabaseApp
             {
                 DirOfMovie = DirectorTB.Text;
                 string SQLexec = "EXEC MovieDB.FetchDirectorOfMovie '" + DirOfMovie + "';";
-                _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+                _f1.SQLQueryConnection(SQLexec);
                 this.Close();
             }
         }
@@ -132,7 +132,7 @@ namespace MovieDatabaseApp
             {
                 MoviePT = MoviePartialTB.Text;
                 string SQLexec = "EXEC MovieDB.FetchFullMovieTitleFromPartialTitle '" + MoviePT + "';";
-                _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+                _f1.SQLQueryConnection(SQLexec);
                 this.Close();
             }
         }
@@ -144,7 +144,7 @@ namespace MovieDatabaseApp
                 string movie= MovieTB.Text;
                 string actor = ActorFNTB.Text;
                 string SQLexec = "EXEC MovieDB.FetchActorsNameFromFirstNameAndMovie'" + actor + "', '" + movie + "';";
-                _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+                _f1.SQLQueryConnection(SQLexec);
                 this.Close();
             }
         }
@@ -172,7 +172,7 @@ namespace MovieDatabaseApp
                     SQLexec += ", " + number;
                 }
                 SQLexec += ";";
-                _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+                _f1.SQLQueryConnection(SQLexec);
                 this.Close();
             }
         }
@@ -184,7 +184,7 @@ namespace MovieDatabaseApp
                 string actor = MovieCountName.Text;
                 string role = MovieCountRole.Text;
                 string SQLexec = "EXEC MovieDB.FetchNumberOfMoviesFromNameAndRole '" + actor + "', '" + role + "';";
-                _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+                _f1.SQLQueryConnection(SQLexec);
                 this.Close();
             }
         }
@@ -195,7 +195,7 @@ namespace MovieDatabaseApp
             {
                 string movie = GOfMovieTB.Text;
                 string SQLexec = "EXEC MovieDB.FetchGenreOfMovie '" + movie + "';";
-                _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+                _f1.SQLQueryConnection(SQLexec);
                 this.Close();
             }
         }

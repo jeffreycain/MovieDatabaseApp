@@ -22,35 +22,35 @@ namespace MovieDatabaseApp
         private void YearlyMC_Click(object sender, EventArgs e)
         {
             string SQLexec = "EXEC MovieDB.FetchYearlyMovieCount;";
-            _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+            _f1.SQLQueryConnection(SQLexec);
             this.Close();
         }
 
         private void MovieCP_Click(object sender, EventArgs e)
         {
             string SQLexec = "EXEC MovieDB.FetchPersonMovieCountsOrderByPerson;";
-            _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+            _f1.SQLQueryConnection(SQLexec);
             this.Close();
         }
 
         private void MovieCC_Click(object sender, EventArgs e)
         {
             string SQLexec = "EXEC MovieDB.FetchPersonMovieCountsOrderByCount;";
-            _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+            _f1.SQLQueryConnection(SQLexec);
             this.Close();
         }
 
         private void CastBreakdown_Click(object sender, EventArgs e)
         {
             string SQLexec = "EXEC MovieDB.FetchMovieCastAggregation";
-            _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+            _f1.SQLQueryConnection(SQLexec);
             this.Close();
         }
 
         private void MoviesPG_Click(object sender, EventArgs e)
         {
             string SQLexec = "EXEC MovieDB.FetchGenreMovieCounts;";
-            _f1.SQLQueryConnection(_f1.tableBox, SQLexec);
+            _f1.SQLQueryConnection(SQLexec);
             this.Close();
         }
     }

@@ -36,7 +36,7 @@ namespace MovieDatabaseApp
                 try
                 {
                     string pass = "EXEC MovieDB.CreatePerson '" + firstName.Text + "', '" + lastName.Text + "', '" + movieTitle.Text + "', '" + RoleBox.Text + "';";
-                    _f1.SQLQueryConnection(_f1.tableBox, "Person has been added.");
+                    _f1.SQLQueryConnection( "Person has been added.");
                 }
                 catch (Exception ex)
                 {
@@ -52,7 +52,7 @@ namespace MovieDatabaseApp
             else
             {
                 string pass = "EXEC MovieDB.AddRole '" + roleName.Text + "';";
-                _f1.SQLQueryConnection(_f1.tableBox, pass);
+                _f1.SQLQueryConnection(pass);
                 _f1.updateRoleListBox(RoleBox);
                 MessageBox.Show("Role Added Successfully");
             }
@@ -66,7 +66,7 @@ namespace MovieDatabaseApp
             {
 
                 string pass = "EXEC MovieDB.AddMovie '" + movie.Text + "', '" + runTime.Value + "', '" + year.Value + "', '" + GenreBox.Text + "';";
-                _f1.SQLQueryConnection(_f1.tableBox, pass);
+                _f1.SQLQueryConnection(pass);
                 MessageBox.Show("Movie Added Successfully");
             }
         }
@@ -81,7 +81,7 @@ namespace MovieDatabaseApp
                 try
                 {
                     string pass = "EXEC MovieDB.UpdatePerson '" + firstName.Text + "', '" + lastName.Text + "', '" + newFirst.Text + "', '" + newLast.Text + "';";
-                    _f1.SQLQueryConnection(_f1.tableBox, "Person has been updated.");
+                    _f1.SQLQueryConnection( "Person has been updated.");
                 }
                 catch (Exception ex)
                 {

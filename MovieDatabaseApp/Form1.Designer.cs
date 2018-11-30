@@ -28,21 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableBox = new System.Windows.Forms.ListBox();
             this.button3 = new System.Windows.Forms.Button();
             this.Pform = new System.Windows.Forms.Button();
             this.TableReader = new System.Windows.Forms.DataGridView();
             this.ReportButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TableReader)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tableBox
-            // 
-            this.tableBox.FormattingEnabled = true;
-            this.tableBox.Location = new System.Drawing.Point(942, 578);
-            this.tableBox.Name = "tableBox";
-            this.tableBox.Size = new System.Drawing.Size(10, 17);
-            this.tableBox.TabIndex = 2;
             // 
             // button3
             // 
@@ -86,12 +77,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 637);
+            this.ClientSize = new System.Drawing.Size(839, 614);
             this.Controls.Add(this.ReportButton);
             this.Controls.Add(this.TableReader);
             this.Controls.Add(this.Pform);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.tableBox);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.TableReader)).EndInit();
@@ -102,7 +92,6 @@
         #endregion
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button Pform;
-        public System.Windows.Forms.ListBox tableBox;
         public System.Windows.Forms.DataGridView TableReader;
         private System.Windows.Forms.Button ReportButton;
     }
