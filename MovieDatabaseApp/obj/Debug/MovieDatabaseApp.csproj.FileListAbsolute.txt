@@ -34,3 +34,4 @@ C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\bin\Debug\MovieD
 C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\bin\Debug\MovieDatabaseApp.pdb
 U:\Database\MovieDBAppGit\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.Procedure.resources
 U:\Database\MovieDBAppGit\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.ReportForm.resources
+C:\Users\kbowers\Source\Repos\MovieDatabaseApp\MovieDatabaseApp\obj\Debug\MovieDatabaseApp.ReportForm.resources

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.GenreTB = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.YearMin = new System.Windows.Forms.NumericUpDown();
             this.RunTimeMax = new System.Windows.Forms.NumericUpDown();
@@ -60,7 +59,6 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.MovieCount = new System.Windows.Forms.NumericUpDown();
             this.RecentMovieByButton = new System.Windows.Forms.Button();
-            this.MovieCountRole = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.MovieCountButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,19 +66,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.GOfMovieTB = new System.Windows.Forms.TextBox();
             this.GOfMovieButton = new System.Windows.Forms.Button();
+            this.GenreTB = new System.Windows.Forms.ListBox();
+            this.MovieCountRole = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.YearMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RunTimeMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RunTimeMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YearMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MovieCount)).BeginInit();
             this.SuspendLayout();
-            // 
-            // GenreTB
-            // 
-            this.GenreTB.Location = new System.Drawing.Point(129, 12);
-            this.GenreTB.Name = "GenreTB";
-            this.GenreTB.Size = new System.Drawing.Size(129, 20);
-            this.GenreTB.TabIndex = 5;
             // 
             // label5
             // 
@@ -406,13 +399,6 @@
             this.RecentMovieByButton.UseVisualStyleBackColor = true;
             this.RecentMovieByButton.Click += new System.EventHandler(this.RecentMovieByButton_Click);
             // 
-            // MovieCountRole
-            // 
-            this.MovieCountRole.Location = new System.Drawing.Point(333, 225);
-            this.MovieCountRole.Name = "MovieCountRole";
-            this.MovieCountRole.Size = new System.Drawing.Size(129, 20);
-            this.MovieCountRole.TabIndex = 52;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -474,15 +460,32 @@
             this.GOfMovieButton.UseVisualStyleBackColor = true;
             this.GOfMovieButton.Click += new System.EventHandler(this.GOfMovieButton_Click);
             // 
+            // GenreTB
+            // 
+            this.GenreTB.FormattingEnabled = true;
+            this.GenreTB.Location = new System.Drawing.Point(129, 12);
+            this.GenreTB.Name = "GenreTB";
+            this.GenreTB.Size = new System.Drawing.Size(129, 17);
+            this.GenreTB.TabIndex = 56;
+            // 
+            // MovieCountRole
+            // 
+            this.MovieCountRole.FormattingEnabled = true;
+            this.MovieCountRole.Location = new System.Drawing.Point(332, 225);
+            this.MovieCountRole.Name = "MovieCountRole";
+            this.MovieCountRole.Size = new System.Drawing.Size(129, 17);
+            this.MovieCountRole.TabIndex = 57;
+            // 
             // YourQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 405);
+            this.Controls.Add(this.MovieCountRole);
+            this.Controls.Add(this.GenreTB);
             this.Controls.Add(this.GOfMovieButton);
             this.Controls.Add(this.GOfMovieTB);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.MovieCountRole);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MovieCountButton);
             this.Controls.Add(this.label2);
@@ -518,7 +521,6 @@
             this.Controls.Add(this.RunTimeMax);
             this.Controls.Add(this.YearMin);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.GenreTB);
             this.Name = "YourQuery";
             this.Text = "YourQuery";
             ((System.ComponentModel.ISupportInitialize)(this.YearMin)).EndInit();
@@ -532,7 +534,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox GenreTB;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown YearMin;
         private System.Windows.Forms.NumericUpDown RunTimeMax;
@@ -564,7 +565,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.NumericUpDown MovieCount;
         private System.Windows.Forms.Button RecentMovieByButton;
-        private System.Windows.Forms.TextBox MovieCountRole;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button MovieCountButton;
         private System.Windows.Forms.Label label2;
@@ -572,5 +572,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox GOfMovieTB;
         private System.Windows.Forms.Button GOfMovieButton;
+        private System.Windows.Forms.ListBox GenreTB;
+        private System.Windows.Forms.ListBox MovieCountRole;
     }
 }

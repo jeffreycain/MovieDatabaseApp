@@ -18,20 +18,11 @@ namespace MovieDatabaseApp
         {
             InitializeComponent();
             _f1 = f1;
-            updateGenreListBox();
-            updateRoleListBox();
+            _f1.updateGenreListBox(GenreBox);
+            _f1.updateRoleListBox(RoleBox);
         }
 
-        public void updateGenreListBox()
-        {
-            _f1.SQLQueryConnection(GenreBox,"Select MovieDB.Genre.Name From MovieDB.Genre");
-            
-
-        }
-        public void updateRoleListBox()
-        {
-            _f1.SQLQueryConnection(RoleBox, "Select MovieDB.Role.Name From MovieDB.Role");
-        }
+       
 
         private void addPerson_Click(object sender, EventArgs e)
         {
@@ -39,17 +30,19 @@ namespace MovieDatabaseApp
             {
                 MessageBox.Show("Error all fields are required to add a person");
             }
-            else {
+            else
+            {
 
                 try
                 {
-                    _f1.SQLQueryConnection(_f1.tableBox, "Exec MovieDB.ThrowError");
+                    string pass = "EXEC MovieDB.CreatePerson '" + firstName.Text + "', '" + lastName.Text + "', '" + movieTitle.Text + "', '" + RoleBox.Text + "';";
+                    _f1.SQLQueryConnection(_f1.tableBox, "Person has been added.");
                 }
-                catch (Exception ex )
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-                }
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -60,8 +53,8 @@ namespace MovieDatabaseApp
             {
                 string pass = "EXEC MovieDB.AddRole '" + roleName.Text + "';";
                 _f1.SQLQueryConnection(_f1.tableBox, pass);
-                updateRoleListBox();
-                MessageBox.Show ("Role Added Successfully");
+                _f1.updateRoleListBox(RoleBox);
+                MessageBox.Show("Role Added Successfully");
             }
         }
 
@@ -71,14 +64,37 @@ namespace MovieDatabaseApp
                 MessageBox.Show("Cannot add a movie without a title");
             else
             {
-  
+
                 string pass = "EXEC MovieDB.AddMovie '" + movie.Text + "', '" + runTime.Value + "', '" + year.Value + "', '" + GenreBox.Text + "';";
                 _f1.SQLQueryConnection(_f1.tableBox, pass);
                 MessageBox.Show("Movie Added Successfully");
             }
         }
-    }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (first.Text == "" || last.Text == "" || newLast.Text == "" || newFirst.Text == "")
+                MessageBox.Show("All fields must be filled out");
+            else
+            {
+
+                try
+                {
+                    string pass = "EXEC MovieDB.UpdatePerson '" + firstName.Text + "', '" + lastName.Text + "', '" + newFirst.Text + "', '" + newLast.Text + "';";
+                    _f1.SQLQueryConnection(_f1.tableBox, "Person has been updated.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
 
         
-    
+    }
+
 }
+        
+    
+
+
