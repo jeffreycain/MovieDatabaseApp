@@ -56,7 +56,6 @@
             this.MovieTB = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.RecentMovieDTB = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.MovieCount = new System.Windows.Forms.NumericUpDown();
             this.RecentMovieByButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,6 +67,7 @@
             this.GOfMovieButton = new System.Windows.Forms.Button();
             this.GenreTB = new System.Windows.Forms.ListBox();
             this.MovieCountRole = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.YearMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RunTimeMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RunTimeMin)).BeginInit();
@@ -80,13 +80,13 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 14);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 13);
+            this.label5.Size = new System.Drawing.Size(122, 13);
             this.label5.TabIndex = 11;
-            this.label5.Text = "MoviesWithGenre";
+            this.label5.Text = "Find Movies from Genre:";
             // 
             // YearMin
             // 
-            this.YearMin.Location = new System.Drawing.Point(129, 76);
+            this.YearMin.Location = new System.Drawing.Point(147, 144);
             this.YearMin.Maximum = new decimal(new int[] {
             2018,
             0,
@@ -108,7 +108,7 @@
             // 
             // RunTimeMax
             // 
-            this.RunTimeMax.Location = new System.Drawing.Point(332, 114);
+            this.RunTimeMax.Location = new System.Drawing.Point(312, 178);
             this.RunTimeMax.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -125,7 +125,7 @@
             // 
             // RunTimeMin
             // 
-            this.RunTimeMin.Location = new System.Drawing.Point(129, 114);
+            this.RunTimeMin.Location = new System.Drawing.Point(146, 178);
             this.RunTimeMin.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -137,7 +137,7 @@
             // 
             // YearMax
             // 
-            this.YearMax.Location = new System.Drawing.Point(332, 76);
+            this.YearMax.Location = new System.Drawing.Point(312, 142);
             this.YearMax.Maximum = new decimal(new int[] {
             2018,
             0,
@@ -160,42 +160,42 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(277, 83);
+            this.label7.Location = new System.Drawing.Point(281, 146);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.Size = new System.Drawing.Size(25, 13);
             this.label7.TabIndex = 17;
-            this.label7.Text = "Between";
+            this.label7.Text = "and";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(277, 119);
+            this.label8.Location = new System.Drawing.Point(281, 184);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 13);
+            this.label8.Size = new System.Drawing.Size(25, 13);
             this.label8.TabIndex = 18;
-            this.label8.Text = "Between";
+            this.label8.Text = "and";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 76);
+            this.label9.Location = new System.Drawing.Point(12, 144);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 13);
+            this.label9.Size = new System.Drawing.Size(129, 13);
             this.label9.TabIndex = 19;
-            this.label9.Text = "Year Released";
+            this.label9.Text = "Movie Released Between";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 114);
+            this.label10.Location = new System.Drawing.Point(12, 182);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 13);
+            this.label10.Size = new System.Drawing.Size(128, 13);
             this.label10.TabIndex = 20;
-            this.label10.Text = "Run Time(Minutes)";
+            this.label10.Text = "Find Movies with Runtime";
             // 
             // GenreButton
             // 
-            this.GenreButton.Location = new System.Drawing.Point(264, 12);
+            this.GenreButton.Location = new System.Drawing.Point(275, 8);
             this.GenreButton.Name = "GenreButton";
             this.GenreButton.Size = new System.Drawing.Size(96, 24);
             this.GenreButton.TabIndex = 25;
@@ -205,7 +205,7 @@
             // 
             // YearReleasedButton
             // 
-            this.YearReleasedButton.Location = new System.Drawing.Point(467, 76);
+            this.YearReleasedButton.Location = new System.Drawing.Point(447, 138);
             this.YearReleasedButton.Name = "YearReleasedButton";
             this.YearReleasedButton.Size = new System.Drawing.Size(96, 24);
             this.YearReleasedButton.TabIndex = 27;
@@ -215,7 +215,7 @@
             // 
             // RuntimeButton
             // 
-            this.RuntimeButton.Location = new System.Drawing.Point(467, 110);
+            this.RuntimeButton.Location = new System.Drawing.Point(447, 176);
             this.RuntimeButton.Name = "RuntimeButton";
             this.RuntimeButton.Size = new System.Drawing.Size(96, 24);
             this.RuntimeButton.TabIndex = 28;
@@ -225,7 +225,7 @@
             // 
             // GenresWithMovieBox
             // 
-            this.GenresWithMovieBox.Location = new System.Drawing.Point(129, 38);
+            this.GenresWithMovieBox.Location = new System.Drawing.Point(140, 35);
             this.GenresWithMovieBox.Name = "GenresWithMovieBox";
             this.GenresWithMovieBox.Size = new System.Drawing.Size(129, 20);
             this.GenresWithMovieBox.TabIndex = 29;
@@ -233,15 +233,15 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 40);
+            this.label11.Location = new System.Drawing.Point(12, 66);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 13);
+            this.label11.Size = new System.Drawing.Size(142, 13);
             this.label11.TabIndex = 30;
-            this.label11.Text = "GenresWithMovie";
+            this.label11.Text = "Find Genres from Movie Title";
             // 
             // GenresWithMovieButton
             // 
-            this.GenresWithMovieButton.Location = new System.Drawing.Point(264, 38);
+            this.GenresWithMovieButton.Location = new System.Drawing.Point(275, 33);
             this.GenresWithMovieButton.Name = "GenresWithMovieButton";
             this.GenresWithMovieButton.Size = new System.Drawing.Size(96, 24);
             this.GenresWithMovieButton.TabIndex = 31;
@@ -251,7 +251,7 @@
             // 
             // DirectorTB
             // 
-            this.DirectorTB.Location = new System.Drawing.Point(129, 140);
+            this.DirectorTB.Location = new System.Drawing.Point(106, 94);
             this.DirectorTB.Name = "DirectorTB";
             this.DirectorTB.Size = new System.Drawing.Size(129, 20);
             this.DirectorTB.TabIndex = 32;
@@ -259,7 +259,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 143);
+            this.label12.Location = new System.Drawing.Point(12, 96);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(88, 13);
             this.label12.TabIndex = 33;
@@ -267,7 +267,7 @@
             // 
             // DirectorButton
             // 
-            this.DirectorButton.Location = new System.Drawing.Point(264, 137);
+            this.DirectorButton.Location = new System.Drawing.Point(241, 94);
             this.DirectorButton.Name = "DirectorButton";
             this.DirectorButton.Size = new System.Drawing.Size(96, 24);
             this.DirectorButton.TabIndex = 34;
@@ -277,7 +277,7 @@
             // 
             // MoviePartialButton
             // 
-            this.MoviePartialButton.Location = new System.Drawing.Point(264, 165);
+            this.MoviePartialButton.Location = new System.Drawing.Point(247, 118);
             this.MoviePartialButton.Name = "MoviePartialButton";
             this.MoviePartialButton.Size = new System.Drawing.Size(96, 24);
             this.MoviePartialButton.TabIndex = 37;
@@ -288,7 +288,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(12, 171);
+            this.label13.Location = new System.Drawing.Point(12, 124);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(94, 13);
             this.label13.TabIndex = 36;
@@ -296,14 +296,14 @@
             // 
             // MoviePartialTB
             // 
-            this.MoviePartialTB.Location = new System.Drawing.Point(129, 168);
+            this.MoviePartialTB.Location = new System.Drawing.Point(112, 121);
             this.MoviePartialTB.Name = "MoviePartialTB";
             this.MoviePartialTB.Size = new System.Drawing.Size(129, 20);
             this.MoviePartialTB.TabIndex = 35;
             // 
             // FirstNameMovieButton
             // 
-            this.FirstNameMovieButton.Location = new System.Drawing.Point(403, 191);
+            this.FirstNameMovieButton.Location = new System.Drawing.Point(484, 211);
             this.FirstNameMovieButton.Name = "FirstNameMovieButton";
             this.FirstNameMovieButton.Size = new System.Drawing.Size(96, 24);
             this.FirstNameMovieButton.TabIndex = 40;
@@ -314,15 +314,15 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(14, 198);
+            this.label14.Location = new System.Drawing.Point(12, 214);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(35, 13);
+            this.label14.Size = new System.Drawing.Size(129, 13);
             this.label14.TabIndex = 39;
-            this.label14.Text = "Actor:";
+            this.label14.Text = "Find Actor From Firstname";
             // 
             // ActorFNTB
             // 
-            this.ActorFNTB.Location = new System.Drawing.Point(52, 195);
+            this.ActorFNTB.Location = new System.Drawing.Point(146, 211);
             this.ActorFNTB.Name = "ActorFNTB";
             this.ActorFNTB.Size = new System.Drawing.Size(129, 20);
             this.ActorFNTB.TabIndex = 38;
@@ -330,7 +330,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(198, 197);
+            this.label15.Location = new System.Drawing.Point(283, 214);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(60, 13);
             this.label15.TabIndex = 41;
@@ -338,7 +338,7 @@
             // 
             // MovieTB
             // 
-            this.MovieTB.Location = new System.Drawing.Point(264, 194);
+            this.MovieTB.Location = new System.Drawing.Point(349, 212);
             this.MovieTB.Name = "MovieTB";
             this.MovieTB.Size = new System.Drawing.Size(129, 20);
             this.MovieTB.TabIndex = 42;
@@ -346,35 +346,23 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(12, 334);
+            this.label16.Location = new System.Drawing.Point(12, 282);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(118, 13);
+            this.label16.Size = new System.Drawing.Size(155, 13);
             this.label16.TabIndex = 43;
-            this.label16.Text = "Most Recent Movie By:";
+            this.label16.Text = "Most Recent Movie By Director";
             // 
             // RecentMovieDTB
             // 
-            this.RecentMovieDTB.Location = new System.Drawing.Point(136, 331);
+            this.RecentMovieDTB.Location = new System.Drawing.Point(164, 279);
             this.RecentMovieDTB.Name = "RecentMovieDTB";
             this.RecentMovieDTB.Size = new System.Drawing.Size(129, 20);
             this.RecentMovieDTB.TabIndex = 44;
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(15, 360);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(130, 17);
-            this.radioButton1.TabIndex = 45;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Multiple recent movies";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.Click += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
             // MovieCount
             // 
-            this.MovieCount.Enabled = false;
-            this.MovieCount.Location = new System.Drawing.Point(151, 357);
+            this.MovieCount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MovieCount.Location = new System.Drawing.Point(140, 305);
             this.MovieCount.Minimum = new decimal(new int[] {
             1,
             0,
@@ -391,7 +379,7 @@
             // 
             // RecentMovieByButton
             // 
-            this.RecentMovieByButton.Location = new System.Drawing.Point(271, 331);
+            this.RecentMovieByButton.Location = new System.Drawing.Point(298, 276);
             this.RecentMovieByButton.Name = "RecentMovieByButton";
             this.RecentMovieByButton.Size = new System.Drawing.Size(96, 24);
             this.RecentMovieByButton.TabIndex = 47;
@@ -402,7 +390,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(267, 228);
+            this.label1.Location = new System.Drawing.Point(295, 244);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 51;
@@ -410,7 +398,7 @@
             // 
             // MovieCountButton
             // 
-            this.MovieCountButton.Location = new System.Drawing.Point(472, 222);
+            this.MovieCountButton.Location = new System.Drawing.Point(489, 238);
             this.MovieCountButton.Name = "MovieCountButton";
             this.MovieCountButton.Size = new System.Drawing.Size(96, 24);
             this.MovieCountButton.TabIndex = 50;
@@ -421,15 +409,15 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 229);
+            this.label2.Location = new System.Drawing.Point(12, 244);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 13);
+            this.label2.Size = new System.Drawing.Size(144, 13);
             this.label2.TabIndex = 49;
-            this.label2.Text = "Movie Count Name:";
+            this.label2.Text = "Find Movie Count From Actor";
             // 
             // MovieCountName
             // 
-            this.MovieCountName.Location = new System.Drawing.Point(121, 226);
+            this.MovieCountName.Location = new System.Drawing.Point(160, 240);
             this.MovieCountName.Name = "MovieCountName";
             this.MovieCountName.Size = new System.Drawing.Size(129, 20);
             this.MovieCountName.TabIndex = 48;
@@ -437,22 +425,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 260);
+            this.label3.Location = new System.Drawing.Point(12, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 13);
+            this.label3.Size = new System.Drawing.Size(121, 13);
             this.label3.TabIndex = 53;
-            this.label3.Text = "Genres of Movie:";
+            this.label3.Text = "Find Movie\'s Information";
             // 
             // GOfMovieTB
             // 
-            this.GOfMovieTB.Location = new System.Drawing.Point(106, 257);
+            this.GOfMovieTB.Location = new System.Drawing.Point(160, 63);
             this.GOfMovieTB.Name = "GOfMovieTB";
             this.GOfMovieTB.Size = new System.Drawing.Size(129, 20);
             this.GOfMovieTB.TabIndex = 54;
             // 
             // GOfMovieButton
             // 
-            this.GOfMovieButton.Location = new System.Drawing.Point(241, 254);
+            this.GOfMovieButton.Location = new System.Drawing.Point(295, 60);
             this.GOfMovieButton.Name = "GOfMovieButton";
             this.GOfMovieButton.Size = new System.Drawing.Size(96, 24);
             this.GOfMovieButton.TabIndex = 55;
@@ -463,7 +451,7 @@
             // GenreTB
             // 
             this.GenreTB.FormattingEnabled = true;
-            this.GenreTB.Location = new System.Drawing.Point(129, 12);
+            this.GenreTB.Location = new System.Drawing.Point(140, 12);
             this.GenreTB.Name = "GenreTB";
             this.GenreTB.Size = new System.Drawing.Size(129, 17);
             this.GenreTB.TabIndex = 56;
@@ -471,16 +459,26 @@
             // MovieCountRole
             // 
             this.MovieCountRole.FormattingEnabled = true;
-            this.MovieCountRole.Location = new System.Drawing.Point(332, 225);
+            this.MovieCountRole.Location = new System.Drawing.Point(354, 244);
             this.MovieCountRole.Name = "MovieCountRole";
             this.MovieCountRole.Size = new System.Drawing.Size(129, 17);
             this.MovieCountRole.TabIndex = 57;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(43, 307);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 13);
+            this.label4.TabIndex = 58;
+            this.label4.Text = "Number of Movies";
             // 
             // YourQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 405);
+            this.ClientSize = new System.Drawing.Size(640, 352);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.MovieCountRole);
             this.Controls.Add(this.GenreTB);
             this.Controls.Add(this.GOfMovieButton);
@@ -492,7 +490,6 @@
             this.Controls.Add(this.MovieCountName);
             this.Controls.Add(this.RecentMovieByButton);
             this.Controls.Add(this.MovieCount);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.RecentMovieDTB);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.MovieTB);
@@ -522,7 +519,7 @@
             this.Controls.Add(this.YearMin);
             this.Controls.Add(this.label5);
             this.Name = "YourQuery";
-            this.Text = "YourQuery";
+            this.Text = "Custom Searches";
             ((System.ComponentModel.ISupportInitialize)(this.YearMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RunTimeMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RunTimeMin)).EndInit();
@@ -562,7 +559,6 @@
         private System.Windows.Forms.TextBox MovieTB;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox RecentMovieDTB;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.NumericUpDown MovieCount;
         private System.Windows.Forms.Button RecentMovieByButton;
         private System.Windows.Forms.Label label1;
@@ -574,5 +570,6 @@
         private System.Windows.Forms.Button GOfMovieButton;
         private System.Windows.Forms.ListBox GenreTB;
         private System.Windows.Forms.ListBox MovieCountRole;
+        private System.Windows.Forms.Label label4;
     }
 }
