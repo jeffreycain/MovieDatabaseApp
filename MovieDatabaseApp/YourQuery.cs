@@ -16,7 +16,6 @@ namespace MovieDatabaseApp
         public YourQuery(Form1 f1)
         {
             InitializeComponent();
-            
             _f1 = f1;
             _f1.updateGenreListBox(GenreTB);
             _f1.updateRoleListBox(MovieCountRole);
