@@ -186,5 +186,7 @@ namespace MovieDatabaseApp
                 this.Close();
             }
         }
+
+ 
     }
 }
