@@ -20,10 +20,21 @@ namespace MovieDatabaseApp
         }
 
 
-        public void SQLQueryConnection(ListBox b, string query)
+        public void updateGenreListBox(ListBox b)
+        {
+            SQLQueryConnectionListBox(b, "Select MovieDB.Genre.Name From MovieDB.Genre");
+
+
+        }
+        public void updateRoleListBox(ListBox r)
+        {
+            SQLQueryConnectionListBox(r, "Select MovieDB.Role.Name From MovieDB.Role");
+        }
+
+        public void SQLQueryConnection(string query)
         {
 
-            b.Items.Clear();
+           // b.Items.Clear();
             for (int x = 0; x < TableReader.ColumnCount; x++)
                 TableReader.Columns.RemoveAt(x);
 
@@ -74,12 +85,57 @@ namespace MovieDatabaseApp
             cnn.Close();
         }
 
+        public void SQLQueryConnectionListBox(ListBox b, string query)
+        {
+
+            b.Items.Clear();
+            for (int x = 0; x < TableReader.ColumnCount; x++)
+                TableReader.Columns.RemoveAt(x);
+
+            string connectionString = null;
+            SqlConnection cnn;
+            SqlCommand command;
+            SqlDataReader dataReader;
+            connectionString = "Data Source = mssql.cs.ksu.edu;Initial Catalog = CIS560_team10; Integrated Security = True";
+            cnn = new SqlConnection(connectionString);
+            cnn.Open();
+            command = new SqlCommand(query, cnn);
+                       dataReader = command.ExecuteReader();
+
+
+            //then loop over the number
+
+            while (dataReader.Read())
+            {
+                Object[] MyObjectX = new object[dataReader.FieldCount];
+                int columnsX = dataReader.GetValues(MyObjectX);
+                //tableBox.Items.Add(dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3));
+                string insertsX = "";
+
+
+                for (int x = 0; x < columnsX; x++)
+                {
+                    insertsX += dataReader.GetValue(x);
+                    if (x < columnsX - 1)
+                        insertsX += " - ";
+                }
+                b.Items.Add(insertsX);
+
+
+
+            }
+
+            dataReader.Close();
+            command.Dispose();
+            cnn.Close();
+        }
+
         private void button_Click(object sender, EventArgs e)
         {
             Button b = sender as Button;
             try
             {
-                SQLQueryConnection(tableBox, b.Text);
+                SQLQueryConnection(b.Text);
             }
             catch (Exception ex)
             {
