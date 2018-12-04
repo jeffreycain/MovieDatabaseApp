@@ -149,16 +149,7 @@ namespace MovieDatabaseApp
             }
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (MovieCount.Enabled == true)
-            {
-                MovieCount.Enabled = false;
-                radioButton1.Checked = false;
-            }
-            else
-                MovieCount.Enabled = true;
-        }
+
 
         private void RecentMovieByButton_Click(object sender, EventArgs e)
         {
@@ -166,11 +157,8 @@ namespace MovieDatabaseApp
             {
                 string director = RecentMovieDTB.Text;
                 string SQLexec = "EXEC MovieDB.FetchMostRecentMovieFromDirector '" + director + "'";
-                if (radioButton1.Checked == true)
-                {
-                    string number = MovieCount.Value.ToString();
-                    SQLexec += ", " + number;
-                }
+                string number = MovieCount.Value.ToString();
+                SQLexec += ", " + number;
                 SQLexec += ";";
                 _f1.SQLQueryConnection(SQLexec);
                 this.Close();

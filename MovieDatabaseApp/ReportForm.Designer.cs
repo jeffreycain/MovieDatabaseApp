@@ -71,7 +71,7 @@
             this.MovieCC.Name = "MovieCC";
             this.MovieCC.Size = new System.Drawing.Size(195, 57);
             this.MovieCC.TabIndex = 3;
-            this.MovieCC.Text = "Movie Count (By Count)";
+            this.MovieCC.Text = "Movie Count Numerically";
             this.MovieCC.UseVisualStyleBackColor = true;
             this.MovieCC.Click += new System.EventHandler(this.MovieCC_Click);
             // 
@@ -81,7 +81,7 @@
             this.MovieCP.Name = "MovieCP";
             this.MovieCP.Size = new System.Drawing.Size(195, 57);
             this.MovieCP.TabIndex = 4;
-            this.MovieCP.Text = "Movie Count (By Person)";
+            this.MovieCP.Text = "Movie Count Alphabetically";
             this.MovieCP.UseVisualStyleBackColor = true;
             this.MovieCP.Click += new System.EventHandler(this.MovieCP_Click);
             // 
@@ -96,7 +96,7 @@
             this.Controls.Add(this.MoviesPG);
             this.Controls.Add(this.YearlyMC);
             this.Name = "ReportForm";
-            this.Text = "ReportForm";
+            this.Text = "Reports";
             this.ResumeLayout(false);
 
         }
