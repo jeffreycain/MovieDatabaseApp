@@ -21,60 +21,13 @@ namespace MovieDatabaseApp
             _f1.updateRoleListBox(MovieCountRole);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //string movieTitle = "";
-            //bool MT = false;
-            //if(MovieTitleTB.Text != string.Empty)
-            //{
-            //    movieTitle = MovieTitleTB.Text;
-            //    MT = true;
-            //}
-
-            //string firstName = "";
-            //bool FN = false;
-            //if (FirstNameTB.Text != string.Empty)
-            //{
-            //    firstName = FirstNameTB.Text;
-            //    FN = true;
-            //}
-
-            //string lastName = "";
-            //bool LN = false;
-            //if (LastNameTB.Text != string.Empty)
-            //{
-            //    lastName = LastNameTB.Text;
-            //    LN = true;
-            //}
-
-            //string characterName = "";
-            //bool CN = false;
-            //if (CharacterNameTB.Text != string.Empty)
-            //{
-            //    characterName = CharacterNameTB.Text;
-            //    CN = true;
-            //}
-            
-
-            //string role = "";
-            //bool R = false;
-            //if (RoleTB.Text != string.Empty)
-            //{
-            //    role = RoleTB.Text;
-            //    R = true;
-            //}
-
-
-            //_f1.SQLQueryConnection(query);
-            this.Close();
-        }
 
         private void RuntimeButton_Click(object sender, EventArgs e)
         {
             string runTimeMin = RunTimeMin.Value.ToString();
             string runTimeMax = RunTimeMax.Value.ToString();
             string SQLexec = "EXEC MovieDB.FetchMoviesWithRuntime " + runTimeMin + ", " + runTimeMax + ";";
-            //MessageBox.Show(SQLexec);
+           
             _f1.SQLQueryConnection(SQLexec);
             this.Close();
         }
