@@ -43,6 +43,8 @@ namespace MovieDatabaseApp
 
         private void GenreButton_Click(object sender, EventArgs e)
         {
+            if (GenreTB.SelectedIndex == -1)
+                MessageBox.Show("Need to select genre");
             string genre = "";
             if (GenreTB.Text != string.Empty)
             {
@@ -119,6 +121,8 @@ namespace MovieDatabaseApp
 
         private void MovieCountButton_Click(object sender, EventArgs e)
         {
+            if (MovieCountRole.SelectedIndex == -1)
+                //MessageBox.Show("Need to select role");
             if (MovieCountName.Text != string.Empty && MovieCountRole.Text != string.Empty)
             {
                 string actor = MovieCountName.Text;

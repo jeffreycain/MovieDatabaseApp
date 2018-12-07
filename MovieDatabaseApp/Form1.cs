@@ -59,8 +59,9 @@ namespace MovieDatabaseApp
         {
 
             b.Items.Clear();
-            for (int x = 0; x < TableReader.ColumnCount; x++)
-                TableReader.Columns.RemoveAt(x);
+            /*for (int x = 0; x < TableReader.ColumnCount; x++)
+                TableReader.Columns.RemoveAt(x);*/
+           // TableReader.Columns.Clear();
 
             string connectionString = null;
             SqlConnection cnn;

@@ -30,6 +30,8 @@ namespace MovieDatabaseApp
             {
                 MessageBox.Show("Error all fields are required to add a person");
             }
+            else if (RoleBox.SelectedIndex == -1)
+                MessageBox.Show("Error you must select a role");
             else
             {
 
@@ -63,6 +65,8 @@ namespace MovieDatabaseApp
         {
             if (movie.Text == "")
                 MessageBox.Show("Cannot add a movie without a title");
+           else if (GenreBox.SelectedIndex== -1)
+                MessageBox.Show("Need to select genre");
             else
             {
 
